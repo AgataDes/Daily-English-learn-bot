@@ -4,9 +4,6 @@ import random
 from deep_translator import GoogleTranslator
 
 
-deepl_link = f"https://www.deepl.com/write"
-reverso_link = f"https://context.reverso.net/translation/english-polish/{word}"
-
 
 
 
@@ -20,6 +17,11 @@ def fetch_data():
     lines = response.text.splitlines()
     chosen_line = random.choice(lines)
     word = chosen_line.split()[0]
+
+    
+    deepl_link = f"https://www.deepl.com/write"
+    reverso_link = f"https://context.reverso.net/translation/english-polish/{word}"
+
     translation = GoogleTranslator(source='en', target='pl').translate(word)
     message = (
         f"### 🇬🇧 Word of the Day: **{word.upper()}**\n"
