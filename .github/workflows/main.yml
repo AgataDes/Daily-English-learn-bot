@@ -2,7 +2,7 @@ name: Daily English Bot
 
 on:
   schedule:
-    - cron: '0 8 * * *' # To jest 10:00 rano czasu polskiego (8:00 UTC)
+    - cron: '0 8 * * *' # To jest 10:00 rano czasu pl (8:00 UTC)
   workflow_dispatch: # To doda przycisk "Run" - testowanie ręczne
 
 jobs:
